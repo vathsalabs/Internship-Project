@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #005A9C;
+    color: white;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+header img {
+    position: absolute;
+    top: 17%;
+    left: 2%;
+    max-width: 150px;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; 
+    margin-bottom: 20px;
+    justify-content: flex-start; 
+    padding-left: 1%;
+}
+
+/* Icon Button Styling */
+.button-container button {
+    background: none; 
+    border: none;
+    cursor: pointer;
+    font-size: 25px; 
+    transition: transform 0.3s ease; 
+}
+
+
+.button-container button:hover {
+    transform: scale(1.4);
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #005A9C;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Status Colors */
+.status-running {
+    color: skyblue;
+    font-weight: bold;
+}
+
+.status-completed {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: blue;
+    font-weight: bold;
+}
+
+.status-translating {
+    color: purple;
+    font-weight: bold;
+}
+.status-terminal{
+    color: Red;
+    font-weight: bold;
+}
+.status-initial{
+    color: brown;
+    font-weight: bold;
+}
+
+/* Time Difference Colors */
+.time-green {
+    color: green;
+    font-weight: bold;
+}
+
+.time-yellow {
+    color: orange;
+    font-weight: bold;
+}
+
+.time-red {
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        justify-content: center; /* Center buttons on small screens */
+    }
+
+    table {
+        width: 100%; /* Full width for smaller screens */
+    }
+}

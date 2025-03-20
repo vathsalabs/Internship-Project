@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        
+        <header>
+            <img src="Inteva-Logo.png" alt="Header Image">
+            <h1>Dispatcher Monitoring Dashboard</h1>
+        </header>
+
+        
+        <main>
+            <div class="button-container">
+                <button id="refresh" title="Refresh">
+                    <i class="fa-solid fa-arrows-rotate" style="color: brown;"></i>
+                </button>
+                <button id="resubmit" title="Re-submit">
+                    <i class="fa-solid fa-rotate-right" style="color: green;"></i>
+                </button>
+                <button id="recreate" title="Re-create">
+                    <i class="fa-solid fa-plus-circle" style="color: blue;"></i>
+                </button>
+                <button id="delete" title="Delete">
+                    <i class="fa-solid fa-trash" style="color: red;"></i>
+                </button>
+
+                
+                <label for="owningGroup">Owning Group:</label>
+                <select id="owningGroup">
+                    <option value="all">All</option>
+                </select>
+                
+                <label for="currentState">State:</label>
+                <select id="currentState">
+                <option value="all">All</option>
+                </select>
+
+                <label for="serviceName">Service:</label>
+                <select id="serviceName">
+                <option value="all">All</option>
+                </select>
+
+
+
+                
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy">
+                    <option value="creation_date">Creation Date</option>
+                    <option value="time_difference">Time Difference</option>
+                </select>
+            </div>
+
+            
+            <div class="table-container">
+                <table id="task-table">
+                    <thead>
+                        <tr id="table-header"></tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
